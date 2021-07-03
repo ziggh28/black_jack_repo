@@ -1,12 +1,17 @@
 console.log("welcome to the jungle");
 /*-------------------------const---------------------*/
-// make a variable where Jack , Queen & King 
+const players_hand = "";
+const dealers_hand ="";
+
+
+// make a conststant where Jack , Queen & King hold a value of 11
 const Jack = Queen = King = 10;
 // make constant for Ace where the Ace card hold a value of 1 or 11
 const Ace = 11;
 console.log(Ace)
-
-const suits =["Spade","Diamonds","Clubs","Hearts",];
+//  make a constant that hold the 4 suit element 
+const suits =["Spades","Diamonds","Clubs","Hearts",];
+// make constant that hold value of the every cards
 const values = [
     "2",
     "3",
@@ -22,15 +27,19 @@ const values = [
     "Ace",
 ];
 
+
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
-// variable holding 52 card ranging from 2 -11
-let deck_Of_Cards =
- [];
+// make an array empty  holding 52 card ranging from 2 -11
+let deck_Of_Cards ="";
+
 console.log(deck_Of_Cards)
+//  loop all the suits in the const suits  
 for(let i= 0; i < suits.length; i++){
+    // loop all values of cards
     for(let j=0; j <values.length; j++)
     {
+        //hold        
         let cards = {Value: values[j], Suit: suits[i]};
              deck_Of_Cards.push(cards)
     }
@@ -44,7 +53,7 @@ for(let i= 0; i < suits.length; i++){
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
 
-
+resetBtn.addEventListener("click", init)
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
 //shuffle function that randomly selects a card from the deck
