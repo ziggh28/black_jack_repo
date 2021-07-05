@@ -1,7 +1,6 @@
 console.log("welcome to the jungle");
 /*-------------------------const---------------------*/
-const players_hand = "";
-const dealers_hand ="";
+
 
 
 // make a conststant where Jack , Queen & King hold a value of 11
@@ -31,17 +30,16 @@ const values = [
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
 // make an array empty  holding 52 card ranging from 2 -11
-let deck_Of_Cards ="";
+let player_name = "";
+
+let deck_Of_Cards = [];
 
 console.log(deck_Of_Cards)
 //  loop all the suits in the const suits  
 for(let i= 0; i < suits.length; i++){
-    // loop all values of cards
-    for(let j=0; j <values.length; j++)
-    {
-        //hold        
+    for(let j=0; j <values.length; j++){
         let cards = {Value: values[j], Suit: suits[i]};
-             deck_Of_Cards.push(cards)
+        deck_Of_Cards.push(cards)
     }
 }
 
@@ -49,11 +47,11 @@ for(let i= 0; i < suits.length; i++){
 /*---------------------cache elements---------------*/
 
 
-
+// document.getElementById('.restart')
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
 
-resetBtn.addEventListener("click", init)
+// reset.addEventListener("click", function(){});
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
 //shuffle function that randomly selects a card from the deck
