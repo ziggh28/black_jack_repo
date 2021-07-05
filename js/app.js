@@ -30,11 +30,12 @@ const values = [
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
 // make an array empty  holding 52 card ranging from 2 -11
-let player_name = "";
 
+let playerHand;
+
+let dealerHand; 
+ 
 let deck_Of_Cards = [];
-
-console.log(deck_Of_Cards)
 //  loop all the suits in the const suits  
 for(let i= 0; i < suits.length; i++){
     for(let j=0; j <values.length; j++){
@@ -47,11 +48,11 @@ for(let i= 0; i < suits.length; i++){
 /*---------------------cache elements---------------*/
 
 
-// document.getElementById('.restart')
+
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
 
-// reset.addEventListener("click", function(){});
+
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
 //shuffle function that randomly selects a card from the deck
@@ -59,9 +60,23 @@ function shuffle_Cards(deck_Of_Cards){
      let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
         return deck_Of_Cards[random_Card];
      } 
-console.log(shuffle_Cards(deck_Of_Cards));
+// console.log(shuffle_Cards(deck_Of_Cards));
 
+function startGame(){
+// randomly selects  2 cards from the shuffle function
+    playerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+// randomly selects  2 cards from the shuffle function
+    dealerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+}
+function sum_of_hand(sum){
+    for(let i= 0; i < sum.length; i++)
+    ValueOfHand
 
+}
+
+startGame()
+console.log(playerHand)
+console.log(dealerHand)
 /*---------------------functions---------------------*/
   
 
