@@ -8,9 +8,9 @@ const Jack = Queen = King = 10;
 // make constant for Ace where the Ace card hold a value of 1 or 11
 const Ace = 11;
 // make constant that hold value of the every cards
-const values = ["2","3","4","5","6","7","8","9","10","Jack","Queen","king", "Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","king", "Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","king", "Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","king", "Ace",
-];
-console.log(values)
+const deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
+
+console.log(deck_Of_Cards)
 
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
@@ -20,12 +20,12 @@ let playerHand;
 
 let dealerHand; 
  
-let deck_Of_Cards = [];
+// let deck_Of_Cards = [];
 //  loop all the suits in the const suits  
-    for(let j=0; j <values.length; j++){
-        let cards = {Value: values[j]};
-        deck_Of_Cards.push(cards)
-    }
+    // for(let j=0; j <values.length; j++){
+    //     let cards = {Value: values[j]};
+    //     deck_Of_Cards.push(cards)
+    // }
 
 
 /*-----------------------variables------------------*/
@@ -55,15 +55,15 @@ function startGame(){
 function handValue(hand){
 let sum = 0;
 for(let i=0; i < hand.length; i++)
-sum += hand[i];
+sum =  sum +hand[i];
 {
     return sum;
 }
 }
 
 startGame()
-console.log()
-console.log(Math.sum(playerHand))
+console.log(playerHand)
+console.log(handValue(playerHand))
 console.log(dealerHand)
 
 function Hit(){
