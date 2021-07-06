@@ -7,7 +7,6 @@ console.log("welcome to the jungle");
 const Jack = Queen = King = 10;
 // make constant for Ace where the Ace card hold a value of 1 or 11
 const Ace = 11;
-console.log(Ace)
 //  make a constant that hold the 4 suit element 
 const suits =["Spades","Diamonds","Clubs","Hearts",];
 // make constant that hold value of the every cards
@@ -25,7 +24,7 @@ const values = [
     "king",
     "Ace",
 ];
-
+console.log(suits)
 
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
@@ -68,15 +67,19 @@ function startGame(){
 // randomly selects  2 cards from the shuffle function
     dealerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
 }
-function sum_of_hand(sum){
-    for(let i= 0; i < sum.length; i++)
-    ValueOfHand
-
-}
-
 startGame()
+console.log()
 console.log(playerHand)
 console.log(dealerHand)
+
+function Hit(){
+    playerHand.push(shuffle_Cards(deck_Of_Cards)),
+    console.log("Hit");
+    console.log("new player hand: " + playerHand)
+}
+
+
+
 /*---------------------functions---------------------*/
   
 
