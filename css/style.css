@@ -1,0 +1,28 @@
+body{
+    background-image:url(https://images.pexels.com/photos/237857/pexels-photo-237857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background: cover;
+    background-position:center center ; 
+    background-size: 1500px;
+  height:100%;
+
+background-attachment: fixed;
+}
+
+.card {
+    height: 8.85em;
+    width: 6.4em;
+    background-color: #fff;
+    border: 1px solid #695d39;
+    border-radius: .5em;                       /* omitted -moz- and -webkit- hacks */
+    box-shadow: -.25em .25em .5em -.25em #000; /* omitted -moz- and -webkit- hacks */
+    font-family: 'Times', serif;
+    line-height: 1em;
+    padding-top: .25em;
+    padding-left: .1em;
+    letter-spacing: -.2em;
+    position: absolute;
+  }
+   
+  .H, .D { color: #890000; }
+  .S, .C { color: #000; }
