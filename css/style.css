@@ -9,6 +9,45 @@ body{
 background-attachment: fixed;
 }
 
+h1{
+    text-align: center;
+    font-size: 100px;
+    font-family: cursive;
+
+}
+h2{
+    text-align: center;
+    font-size: 75px;
+    font-family: cursive;
+    color: #890000;
+}
+#Hit{
+    text-align: center;
+    font-size: 100px;
+    font-family: cursive;
+
+}
+#Stand{text-align: center;
+    font-size: 100px;
+    font-family: cursive;
+
+}
+
+#Deal{text-align: center;
+    font-size: 100px;
+    font-family: cursive;
+
+}
+#Split{text-align: center;
+    font-size: 100px;
+    font-family: cursive;
+
+
+}
+
+
+
+
 .card {
     height: 8.85em;
     width: 6.4em;
