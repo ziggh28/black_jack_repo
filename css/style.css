@@ -1,5 +1,5 @@
 body{
-    background-image:url(https://images.pexels.com/photos/237857/pexels-photo-237857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-image:url(https://image.freepik.com/free-vector/poker-table-background-green-color_47243-1068.jpg);
     background-repeat: no-repeat;
     background: cover;
     background-position:center center ; 
@@ -23,26 +23,24 @@ h2{
 }
 #Hit{
     text-align: center;
-    font-size: 100px;
+    font-size: 25px;
     font-family: cursive;
 
 }
 #Stand{text-align: center;
-    font-size: 100px;
+    font-size: 25px;
     font-family: cursive;
 
 }
 
 #Deal{text-align: center;
-    font-size: 100px;
+    font-size: 75px;
     font-family: cursive;
 
 }
 #Split{text-align: center;
-    font-size: 100px;
+    font-size: 25px;
     font-family: cursive;
-
-
 }
 
 
