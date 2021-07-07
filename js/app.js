@@ -68,9 +68,18 @@ console.log(dealerHand)
 
 function Hit(){
     playerHand.push(shuffle_Cards(deck_Of_Cards)),
-    console.log("Hit");
-    console.log("new player hand: " + playerHand)
+    console.log("new player hand: " + handValue(playerHand));
+if(handValue(playerHand)>21){
+    console.log("bust!")
 }
+console.log("new player hand: " + handValue(playerHand));
+}
+
+
+
+
+
+
 
 
 
