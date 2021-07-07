@@ -4,6 +4,7 @@ console.log("welcome to the jungle");
 
 
 // make a conststant where Jack , Queen & King hold a value of 11
+const deal = null
 const Jack = Queen = King = 10;
 // make constant for Ace where the Ace card hold a value of 1 or 11
 const Ace = 11;
@@ -30,12 +31,15 @@ let dealerHand;
 
 /*-----------------------variables------------------*/
 /*---------------------cache elements---------------*/
+let dealbtn = document.getElementById(".deal") 
+let hitBtn = document.getElementById("#Hit") 
+let standbtn = document.getElementById(".stand") 
 
 
 
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
-
+// hitBtn.addEventListener("click", Hit);
 
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
@@ -68,15 +72,22 @@ console.log(dealerHand)
 
 function Hit(){
     playerHand.push(shuffle_Cards(deck_Of_Cards)),
-    console.log("new player hand: " + handValue(playerHand));
+    alert("new player hand: " + handValue(playerHand));
 if(handValue(playerHand)>21){
     console.log("bust!")
 }
 console.log("new player hand: " + handValue(playerHand));
 }
+// document.querySelector("#Hit").textContent = handValue()
+console.log("new playerHand:"+ handValue(playerHand))
+function stand(){
+if(handValue(playerHand) < dealerHand){
 
-
-
+}
+}
+// deal function 
+function deal(){
+}
 
 
 

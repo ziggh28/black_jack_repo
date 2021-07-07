@@ -1,12 +1,11 @@
 body{
     background-image:url(https://image.freepik.com/free-vector/poker-table-background-green-color_47243-1068.jpg);
     background-repeat: no-repeat;
-    background: cover;
     background-position:center center ; 
     background-size: 1500px;
-  height:100%;
+  height: full fixed;
 
-background-attachment: fixed;
+
 }
 
 h1{
