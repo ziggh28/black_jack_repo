@@ -48,15 +48,18 @@ function init(){
 }
 // make handleclick function
 function handleClick(){
-console.log("click")
+//shuffle function that randomly selects a card from the deck
+     let random_Card = Math.floor(Math.random()* deck_Of_Cards.length)
+       // random cardpicker
+       cardPicked = deck_Of_Cards.splice(random_card, 1)
+        playerHand.push(cardPicked)
+        dealerHand.push(cardPicked)
+render(cardPicked)
 
+    }
 
-
-// //shuffle function that randomly selects a card from the deck
-// function shuffle_Cards(deck_Of_Cards){
-//      let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
-//         return deck_Of_Cards[random_Card];
-//      } 
+     // render function 
+     function render(cardPicked){}
 // // console.log(shuffle_Cards(deck_Of_Cards));
 
 // function startGame(){
@@ -99,7 +102,7 @@ console.log("click")
 // }
 
 
-}
+
 
 
 
