@@ -27,6 +27,10 @@ The dealer must hit if their card total is less than 17, and must stand if it is
 
 Whichever player gets closest to 21 without exceeding it, wins.
 
+screen shots 
+
+
+
 technology used
 
 html, css and javascript
