@@ -28,64 +28,64 @@ let deck_Of_Cards = []
 
 /*-----------------------variables------------------*/
 /*---------------------cache elements---------------*/
-let dealbtn = document.getElementById(".deal") 
-let hitBtn = document.getElementById("#Hit") 
-let standbtn = document.getElementById(".stand") 
+// let dealbtn = document.getElementById(".deal") 
+// let hitBtn = document.getElementById("#Hit") 
+// let standbtn = document.getElementById(".stand") 
 let deck = document.getElementById('deck')
 
 
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
-document.getElementById('btn').addEventListener('click', ()=> console.log('clicked'))
+document.getElementById('#button').addEventListener('click', ()=> console.log('clicked'))
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
 
- function deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
-//shuffle function that randomly selects a card from the deck
-function shuffle_Cards(deck_Of_Cards){
-     let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
-        return deck_Of_Cards[random_Card];
-     } 
-// console.log(shuffle_Cards(deck_Of_Cards));
+//  function deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
+// //shuffle function that randomly selects a card from the deck
+// function shuffle_Cards(deck_Of_Cards){
+//      let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
+//         return deck_Of_Cards[random_Card];
+//      } 
+// // console.log(shuffle_Cards(deck_Of_Cards));
 
-function startGame(){
-// randomly selects  2 cards from the shuffle function
-    playerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
-// randomly selects  2 cards from the shuffle function
-    dealerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
-}
-function handValue(hand){
-let sum = 0;
-for(let i=0; i < hand.length; i++)
-sum =  sum +hand[i];
-{
-    return sum;
-}
-}
+// function startGame(){
+// // randomly selects  2 cards from the shuffle function
+//     playerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+// // randomly selects  2 cards from the shuffle function
+//     dealerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+// }
+// function handValue(hand){
+// let sum = 0;
+// for(let i=0; i < hand.length; i++)
+// sum =  sum +hand[i];
+// {
+//     return sum;
+// }
+// }
 
-startGame()
-console.log(playerHand)
-console.log(handValue(playerHand))
-console.log(dealerHand)
+// startGame()
+// console.log(playerHand)
+// console.log(handValue(playerHand))
+// console.log(dealerHand)
 
-function Hit(){
-    playerHand.push(shuffle_Cards(deck_Of_Cards)),
-    alert("new player hand: " + handValue(playerHand));
-if(handValue(playerHand)>21){
-    console.log("bust!")
-}
-console.log("new player hand: " + handValue(playerHand));
-}
-// document.querySelector("#Hit").textContent = handValue()
-console.log("new playerHand:"+ handValue(playerHand))
-function stand(){
-if(handValue(playerHand) < dealerHand){
+// function Hit(){
+//     playerHand.push(shuffle_Cards(deck_Of_Cards)),
+//     alert("new player hand: " + handValue(playerHand));
+// if(handValue(playerHand)>21){
+//     console.log("bust!")
+// }
+// console.log("new player hand: " + handValue(playerHand));
+// }
+// // document.querySelector("#Hit").textContent = handValue()
+// console.log("new playerHand:"+ handValue(playerHand))
+// function stand(){
+// if(handValue(playerHand) < dealerHand){
 
-}
-}
-// deal function 
-function deal(){
-}
+// }
+// }
+// // deal function 
+// function deal(){
+// }
 
 
 
