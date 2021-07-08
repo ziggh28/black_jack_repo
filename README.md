@@ -12,7 +12,7 @@ Stand: is to hold your total and end your turn. If you go over 21 you bust, and 
 
 bust: mean that the value of the hand went over twenty-one. When you bust you lose, when the dealer busts you will wi
 
-21:
+21: if the player/dealer has a combination of cards that equal to 21. they automateley win the game.
 
 
 *purpose of the game 
