@@ -36,11 +36,22 @@ let deck = document.getElementById('deck')
 
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
-document.getElementById('#button').addEventListener('click', ()=> console.log('clicked'))
+document.getElementById('stand').addEventListener('click', handleClick);
+document.getElementById('hit').addEventListener('click', handleClick);
+document.getElementById('deal').addEventListener('click', handleClick);
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
+init()
+function init(){
+        //make a 52 card deck function
+    deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
+}
+// make handleclick function
+function handleClick(){
+console.log("click")
 
-//  function deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
+
+
 // //shuffle function that randomly selects a card from the deck
 // function shuffle_Cards(deck_Of_Cards){
 //      let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
@@ -88,7 +99,7 @@ document.getElementById('#button').addEventListener('click', ()=> console.log('c
 // }
 
 
-
+}
 
 
 
