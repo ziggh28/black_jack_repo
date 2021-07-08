@@ -27,14 +27,16 @@ The dealer must hit if their card total is less than 17, and must stand if it is
 
 Whichever player gets closest to 21 without exceeding it, wins.
 
-screen shots 
+screenshots:
+![Screen Shot 2021-07-08 at 1 14 50 PM](https://user-images.githubusercontent.com/86076993/124973146-2f660d00-dff9-11eb-843c-29a8e0850cf6.png)
+![Screen Shot 2021-07-08 at 2 38 53 PM](https://user-images.githubusercontent.com/86076993/124974007-435e3e80-dffa-11eb-8dbc-7b3afd99e60a.png)
 
 
 
-technology used
+technology used:
+html, css, javascript and surge
 
-html, css and javascript
+icebox: add a bet system to the game with a audio element , add split function. 
 
-credit 
+credit: 
 ben manley, blake romano , caroline urea
-*\
