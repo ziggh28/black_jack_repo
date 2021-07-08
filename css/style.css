@@ -3,29 +3,43 @@ body{
     background-repeat: no-repeat;
     background-position:center center ; 
     background-size: 1500px;
-  height: full fixed;
+    height: full fixed;
+}
+#player{
+    position: relative;
+    right:520px;
+    top: 10px;
+}
+
+#dealer{
+    position: relative;
+    left:550px;
+    bottom: 500px;
 }
 
 #bottom-row{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    position:absolute;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+}
+.dealer-cards{
     position: relative;
-    top: 390px;
+    left:1300px;
+    bottom: 500px;
     
+}
+.player-cards{
+    position: relative;
+    left:220px;
+    top: 30px;
 }
 button{
     text-align: center;
     font-size: 25px;
     font-family: cursive;
 }
-
-
-
-
-
-
-
 h1{
     text-align: center;
     font-size: 100px;
@@ -38,6 +52,7 @@ h2{
     font-family: cursive;
     color: #890000;
 }
+
 .card {
     box-sizing: border-box;
     display: inline-block;
