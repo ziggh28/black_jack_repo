@@ -1,7 +1,8 @@
 # black_jack_repo
-/*
+*reason for building the game is learning control flow and css styling 
 
 *purpose of the game 
+
   blackjack commmonly know as 21  is a card game,  the rulse to the game are fairly simple 
 
 two cards are dealt to each player. The dealer shows one card face up, and the other is face down.  The player gets to see both of his or her cards and the total of them is added.  Face cards (Kings, Queens, and Jacks) are worth 10 points, Aces are worth 11 points, and all other cards are worth their face value.  The goal of the game is to get as close to 21 (“blackjack”) without going over (called “busting.”)
@@ -16,7 +17,8 @@ The dealer must hit if their card total is less than 17, and must stand if it is
 
 Whichever player gets closest to 21 without exceeding it, wins.
 
-
+technology 
+html, css and javascript
 
 
 
