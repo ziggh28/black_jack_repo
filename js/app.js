@@ -13,9 +13,9 @@ const Ace = 11;
 /*-----------------------variables------------------*/
 // make an array empty  holding 52 card ranging from 2 -11
 
-let playerHand;
+let playerHand= [];
 
-let dealerHand;
+let dealerHand= [];
 
 let deck_Of_Cards = []
 // let deck_Of_Cards = [];
@@ -49,9 +49,9 @@ function init(){
 // make handleclick function
 function handleClick(){
 //shuffle function that randomly selects a card from the deck
-     let random_Card = Math.floor(Math.random()* deck_Of_Cards.length)
+     let randomCard = Math.floor(Math.random()* deck_Of_Cards.length)
        // random cardpicker
-       cardPicked = deck_Of_Cards.splice(random_card, 1)
+       cardPicked = deck_Of_Cards.splice(randomCard, 1)
         playerHand.push(cardPicked)
         dealerHand.push(cardPicked)
 render(cardPicked)

@@ -2,38 +2,38 @@ body{
     background-image:url(https://image.freepik.com/free-vector/poker-table-background-green-color_47243-1068.jpg);
     background-repeat: no-repeat;
     background-position:center center ; 
-    background-size: 1500px;
-    height: full fixed;
+    background-size: 3000px;
+    
 }
 #player{
-    position: absolute;
-    left:340px;
-    top: 150px;
+    position: relative;
+    right:550px;
+    bottom:150px;
 }
 
 #dealer{
-    position: absolute;
-    right:340px;
-    top: 150px;
+    position: relative;
+    left:540px;
+    bottom: 670px;
 }
 
 #bottom-row{
-    position:absolute;
-    bottom:500px;
+    position:relative;
+    top:100px;
     right:25%;
-    left:50%;
+    left:52%;
     margin-left:-150px;
 }
 .dealer-cards{
-    position: absolute;
-    left:1300px;
-    bottom:300px;
+    position: relative;
+    left:1500px;
+    bottom:620px;
     
 }
 .player-cards{
-    position: absolute;
-    left:230px;
-    bottom: 300px;
+    position: relative;
+    left:430px;
+    bottom: 100px;
 }
 button{
     
