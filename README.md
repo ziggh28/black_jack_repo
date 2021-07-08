@@ -1,5 +1,19 @@
 # black_jack_repo
-*reason for building the game is learning control flow and css styling 
+*reason I picked blackjack is because blackjack is a mid-level game that at offered me a chance to better develope my skill in css and javscript 
+
+*what i learned- understanding gamelogic and control- flow. 
+
+
+* terminalogy 
+  
+Hit: to ask the dealer to deal them another card. 
+
+Stand: is to hold your total and end your turn. If you go over 21 you bust, and the dealer wins regardless of the dealer's hand. 
+
+bust: mean that the value of the hand went over twenty-one. When you bust you lose, when the dealer busts you will wi
+
+21:
+
 
 *purpose of the game 
 
@@ -9,17 +23,16 @@ two cards are dealt to each player. The dealer shows one card face up, and the o
 
 the player goes first, the player as to the value of all of his/her cards and a decision on the 1 card shown by the dealer. the player has two choice to hit or stand.
 
-Hit: to ask the dealer to deal them another card. 
-
-Stand:is to hold your total and end your turn. If you go over 21 you bust, and the dealer wins regardless of the dealer's hand. 
-
 The dealer must hit if their card total is less than 17, and must stand if it is 17 or higher. 
 
 Whichever player gets closest to 21 without exceeding it, wins.
 
-technology 
+technology used
+
 html, css and javascript
 
+credit 
+ben manley, blake romano , caroline urea
 
 
 *\
