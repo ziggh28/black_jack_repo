@@ -19,7 +19,7 @@ body{
 
 #bottom-row{
     position:absolute;
-    bottom:0px;
+    bottom:500px;
     right:25%;
     left:50%;
     margin-left:-150px;
@@ -31,9 +31,9 @@ body{
     
 }
 .player-cards{
-    position: relative;
-    left:220px;
-    top: 30px;
+    position: absolute;
+    left:230px;
+    bottom: 300px;
 }
 button{
     
