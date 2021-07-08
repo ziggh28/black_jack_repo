@@ -4,14 +4,10 @@ console.log("welcome to the jungle");
 
 
 // make a conststant where Jack , Queen & King hold a value of 11
-const deal = null
+
 const Jack = Queen = King = 10;
 // make constant for Ace where the Ace card hold a value of 1 or 11
 const Ace = 11;
-// make constant that hold value of the every cards
-const deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
-
-console.log(deck_Of_Cards)
 
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
@@ -19,8 +15,9 @@ console.log(deck_Of_Cards)
 
 let playerHand;
 
-let dealerHand; 
- 
+let dealerHand;
+
+let deck_Of_Cards = []
 // let deck_Of_Cards = [];
 //  loop all the suits in the const suits  
     // for(let j=0; j <values.length; j++){
@@ -34,15 +31,16 @@ let dealerHand;
 let dealbtn = document.getElementById(".deal") 
 let hitBtn = document.getElementById("#Hit") 
 let standbtn = document.getElementById(".stand") 
-
+let deck = document.getElementById('deck')
 
 
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
-// hitBtn.addEventListener("click", Hit);
-
+document.getElementById('btn').addEventListener('click', ()=> console.log('clicked'))
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
+
+ function deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
 //shuffle function that randomly selects a card from the deck
 function shuffle_Cards(deck_Of_Cards){
      let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
