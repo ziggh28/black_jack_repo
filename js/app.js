@@ -1,106 +1,150 @@
+
+
+
 console.log("welcome to the jungle");
 /*-------------------------const---------------------*/
-
-
-
 // make a conststant where Jack , Queen & King hold a value of 11
-
-const Jack = Queen = King = 10;
+const Jack = 10
+const Queen = 10 
+const King = 10
 // make constant for Ace where the Ace card hold a value of 1 or 11
-const A = 11;
-
+const Ace = 11;
+// make constant that hold value of the every cards
+const deck_Of_Cards = [2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King,Ace,];
+console.log(deck_Of_Cards)
 /*-------------------------const--------------------*/
 /*-----------------------variables------------------*/
 // make an array empty  holding 52 card ranging from 2 -11
-
-let playerHand= [];
-
-let dealerHand= [];
-
-let deck_Of_Cards = []
+let playerHand;
+let dealerHand; 
 // let deck_Of_Cards = [];
 //  loop all the suits in the const suits  
     // for(let j=0; j <values.length; j++){
     //     let cards = {Value: values[j]};
     //     deck_Of_Cards.push(cards)
     // }
-
-
 /*-----------------------variables------------------*/
 /*---------------------cache elements---------------*/
-let deck = document.getElementById('deck')
-
+// let dealbtn = document.getElementById(".deal") 
+let hitBtn = document.getElementById("hit")
+let standbtn = document.getElementById("stand") 
+let resetbtn = document.getElementById("reset") 
 /*--------------------cache elements-----------------*/
 /*-------------------add EventListener---------------*/
-document.getElementById('stand').addEventListener('click', handleClick);
-document.getElementById('hit').addEventListener('click', handleClick);
-document.getElementById('deal').addEventListener('click', handleClick);
+hitBtn.addEventListener("click", hit);
+standbtn.addEventListener("click", stand);
+resetbtn.addEventListener("click", reset);
 /*-------------------add EventListener---------------*/
 /*---------------------functions---------------------*/
-
-// Initialize deck 1 with array of 52 cards 
-function init() {
-  deck1 = ["dA","dQ","dK","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02","hA","hQ","hK","hJ","h10","h09","h08","h07","h06","h05","h04","h03","h02","cA","cQ","cK","cJ","c10","c09","c08","c07","c06","c05","c04","c03","c02","sA","sQ","sK","sJ","s10","s09","s08","s07","s06","s05","s04","s03","s02"]
-}
-// Function to handle a button click:
-function handleClick(){
-  // Error handling
-  if (deck_Of_Cards.length > 0){
-    let random_card = Math.floor(Math.random() * deck_Of_Cards.length)
-    
-    cardPicked = deck1.splice(random_card, 1)
-    // Add card picked to deck 2
-    playerHand.push(cardPicked[0])
-    dealerHand.push(cardPicked[0])
-    // Pass card picked to render function to display
-    render(cardPicked)
-  }
-}
-// Function to render deck state
-function render(cardPicked){
-  // Remove outline class when first card is picked
-}
+//shuffle function that randomly selects a card from the deck
+function shuffle_Cards(deck_Of_Cards){
+  let random_Card = Math.floor(deck_Of_Cards.length * Math.random());
+  return deck_Of_Cards[random_Card];
+} 
 // console.log(shuffle_Cards(deck_Of_Cards));
-
 function startGame(){
 // randomly selects  2 cards from the shuffle function
     playerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+    // create a div element with the first value of  the playerhand
+    const playerCard1 = document.createElement("div")
+    // add a class to the card element
+    playerCard1.classList.add("card")
+    console.log(playerCard1)
+    playerCard1.innerText=playerHand[0]
+    const playerCard2 = document.createElement("div")
+    // add a class to the card element
+    playerCard2.classList.add("card")
+    console.log(playerCard2)
+    playerCard2.innerText=playerHand[1]
+    // append the element to the playerhand div
+    // first step grab element playerhand div
+   let playHands= document.getElementById("playerHand")
+   console.log(playHands)
+    // second step append playercards to the playhand div
+    playHands.appendChild(playerCard1)
+    playHands.appendChild(playerCard2)
+     
+    
 // randomly selects  2 cards from the shuffle function
     dealerHand = [shuffle_Cards(deck_Of_Cards),shuffle_Cards(deck_Of_Cards)];
+
+    // create a div element with the first value of  the playerhand
+    const dealerCard1 = document.createElement("div")
+    // add a class to the card element
+    dealerCard1.classList.add("card")
+    console.log(playerCard1)
+    dealerCard1.innerText=dealerHand[0]
+    const dealerCard2 = document.createElement("div")
+    // add a class to the card element
+    dealerCard2.classList.add("card")
+    console.log(dealerCard2)
+    dealerCard2.innerText=dealerHand[1]
+    // append the element to the playerhand div
+    // first step grab element playerhand div
+   let dealHands= document.getElementById("dealerHand")
+   console.log(dealHands)
+    // second step append playercards to the playhand div
+    dealHands.appendChild(dealerCard1)
+    dealHands.appendChild(dealerCard2)
 }
 function handValue(hand){
-let sum = 0;
-for(let i=0; i < hand.length; i++)
-sum =  sum +hand[i];
-{
-    return sum;
+  let sum = 0;
+  for (let i=0 ; i < hand.length; i++){
+    sum =  sum +hand[i];
+  }
+  return sum;
 }
-}
-
 startGame()
 console.log(playerHand)
-console.log(handValue(playerHand))
+console.log(handValue(playerHand), ' < PLAYER HAND')
 console.log(dealerHand)
-
-function Hit(){
-    playerHand.push(shuffle_Cards(deck_Of_Cards)),
-    alert("new player hand: " + handValue(playerHand));
-if(handValue(playerHand)>21){
-    console.log("bust!")
+console.log(handValue(dealerHand), ' < DEALER HAND')
+function hit(){
+  playerHand.push(shuffle_Cards(deck_Of_Cards)),
+  alert("PLAYER hand: " + handValue(playerHand));
+  if(handValue(playerHand)>21){
+    console.log("PLAYER BUST!")
+  }
+  console.log(handValue(playerHand), "< NE PLAYER HAND");
+} if(handValue(playerHand) === 21) {
+  console.log("player wins!")
 }
-console.log("new player hand: " + handValue(playerHand));
-}
-// // document.querySelector("#Hit").textContent = handValue()
+// document.querySelector("#Hit").textContent = handValue()
 // console.log("new playerHand:"+ handValue(playerHand))
-// function stand(){
-// if(handValue(playerHand) < dealerHand){
+function stand(){
+  while (handValue(dealerHand) < 17){
+      // deal one card for the dealer
+    dealerHand.push(shuffle_Cards(deck_Of_Cards)),
+      alert(handValue(dealerHand), ' < NEW DEALER HAND');
+    if (handValue(dealerHand) > 21) {
+      console.log("DEALER BUST! ")
+    }if(handValue(dealerHand) === 21) {
+      console.log("dealer wins!")
+    }
+    console.log("DEALER hand: " + handValue(dealerHand));
+  }
+}
 
-// }
-// }
-// // deal function 
-// function deal(){
-// }
+function reset() {
+  window.location.reload()  
+ }
+
+
+
+
+
+//  wincondition last thing
 /*---------------------functions---------------------*/
   
+
+
+
+
+
+
+
+
+
+
 
 
