@@ -72,7 +72,7 @@ function startGame(){
     const dealerCard1 = document.createElement("div")
     // add a class to the card element
     dealerCard1.classList.add("card")
-    console.log(playerCard1)
+    console.log(dealerCard1)
     dealerCard1.innerText=dealerHand[0]
     const dealerCard2 = document.createElement("div")
     // add a class to the card element
@@ -86,42 +86,66 @@ function startGame(){
     // second step append playercards to the playhand div
     dealHands.appendChild(dealerCard1)
     dealHands.appendChild(dealerCard2)
-}
-function handValue(hand){
-  let sum = 0;
-  for (let i=0 ; i < hand.length; i++){
-    sum =  sum +hand[i];
   }
-  return sum;
-}
-startGame()
-console.log(playerHand)
-console.log(handValue(playerHand), ' < PLAYER HAND')
-console.log(dealerHand)
-console.log(handValue(dealerHand), ' < DEALER HAND')
+  function playerhandValue(pHand){
+    let max = 0;
+    for (let i=0 ; i < pHand.length; i++){
+      max =  max +pHand[i];
+    }
+    document.getElementById("pHV").innerText= "player hand Value: "+ max,
+    console.log(max)
+    return max;
+   }
+  
+   function dealerhandValue(dHand){
+    let sum = 0;
+    for (let i=0 ; i < dHand.length; i++){
+      sum =  sum +dHand[i];
+    }
+    document.getElementById("dhV").innerText= "dealer hand Value: "+ sum,
+    console.log(sum)
+    return sum;
+   }
+  
+
+
+
+
+  startGame()
+  console.log(playerHand)
+  console.log(dealerhandValue(dealerHand), "dealerHANDER")
+
+  console.log(dealerHand)
+  // console.log(handValue(dealerHand), "dealerHANDER")
+
+
 function hit(){
   playerHand.push(shuffle_Cards(deck_Of_Cards)),
-  alert("PLAYER hand: " + handValue(playerHand));
-  if(handValue(playerHand)>21){
+  alert("PLAYER hand: " + playerhandValue(playerHand));
+  const playerCard3 = document.createElement('div')
+  playerCard3.classList.add("card")
+  console.log(playerCard3) 
+  playerCard3.innertext=hit
+  if(playerhandValue(playerHand)>21){
     console.log("PLAYER BUST!")
   }
-  console.log(handValue(playerHand), "< NE PLAYER HAND");
-} if(handValue(playerHand) === 21) {
+  console.log(playerhandValue(playerHand),"< NEW PLAYER HAND");
+} if(playerhandValue(playerHand) === 21) {
   console.log("player wins!")
 }
 // document.querySelector("#Hit").textContent = handValue()
 // console.log("new playerHand:"+ handValue(playerHand))
 function stand(){
-  while (handValue(dealerHand) < 17){
-      // deal one card for the dealer
+  while (dealerhandValue(dealerHand) < 17){
+    // deal one card for the dealer
     dealerHand.push(shuffle_Cards(deck_Of_Cards)),
-      alert(handValue(dealerHand), ' < NEW DEALER HAND');
-    if (handValue(dealerHand) > 21) {
-      console.log("DEALER BUST! ")
-    }if(handValue(dealerHand) === 21) {
-      console.log("dealer wins!")
+    alert(dealerhandValue(dealerHand), ' < NEW DEALER HAND');
+    if (dealerhandValue(dealerHand) > 21) {
+     alert("DEALER BUST! ")
+    }if(dealerhandValue(dealerHand) === 21) {
+    alert("dealer wins!")
     }
-    console.log("DEALER hand: " + handValue(dealerHand));
+    console.log("DEALER hand: " + dealerhandValue(dealerHand));
   }
 }
 
@@ -136,7 +160,6 @@ function reset() {
 //  wincondition last thing
 /*---------------------functions---------------------*/
   
-
 
 
 
