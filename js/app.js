@@ -1,9 +1,7 @@
 
-
-
 console.log("welcome to the jungle");
 /*-------------------------const---------------------*/
-// make a conststant where Jack , Queen & King hold a value of 11
+// make a constant where Jack , Queen & King hold a value of 11
 const Jack = 10
 const Queen = 10 
 const King = 10
@@ -48,18 +46,27 @@ function startGame(){
     // create a div element with the first value of  the playerhand
     const playerCard1 = document.createElement("div")
     // add a class to the card element
+   
     playerCard1.classList.add("card")
     console.log(playerCard1)
     playerCard1.innerText=playerHand[0]
     const playerCard2 = document.createElement("div")
     // add a class to the card element
+   
     playerCard2.classList.add("card")
     console.log(playerCard2)
     playerCard2.innerText=playerHand[1]
     // append the element to the playerhand div
     // first step grab element playerhand div
-   let playHands= document.getElementById("playerHand")
-   console.log(playHands)
+   
+    const playerCard3 = document.createElement('div')
+    playerCard3.classList.add("card")
+    console.log(playerCard3) 
+    playerCard3.innertext= playerHand[2]
+    
+    
+    let playHands= document.getElementById("playerHand")
+    console.log(playHands)
     // second step append playercards to the playhand div
     playHands.appendChild(playerCard1)
     playHands.appendChild(playerCard2)
@@ -71,22 +78,28 @@ function startGame(){
     // create a div element with the first value of  the playerhand
     const dealerCard1 = document.createElement("div")
     // add a class to the card element
+   
     dealerCard1.classList.add("card")
     console.log(dealerCard1)
     dealerCard1.innerText=dealerHand[0]
     const dealerCard2 = document.createElement("div")
     // add a class to the card element
+   
     dealerCard2.classList.add("card")
     console.log(dealerCard2)
     dealerCard2.innerText=dealerHand[1]
     // append the element to the playerhand div
     // first step grab element playerhand div
-   let dealHands= document.getElementById("dealerHand")
+   
+    let dealHands= document.getElementById("dealerHand")
    console.log(dealHands)
     // second step append playercards to the playhand div
     dealHands.appendChild(dealerCard1)
     dealHands.appendChild(dealerCard2)
   }
+  
+  
+  
   function playerhandValue(pHand){
     let max = 0;
     for (let i=0 ; i < pHand.length; i++){
@@ -97,6 +110,7 @@ function startGame(){
     return max;
    }
   
+   
    function dealerhandValue(dHand){
     let sum = 0;
     for (let i=0 ; i < dHand.length; i++){
@@ -106,40 +120,38 @@ function startGame(){
     console.log(sum)
     return sum;
    }
-  
 
 
 
-
-  startGame()
+   startGame()
   console.log(playerHand)
   console.log(dealerhandValue(dealerHand), "dealerHANDER")
 
   console.log(dealerHand)
-  // console.log(handValue(dealerHand), "dealerHANDER")
+  
 
 
+
+  //player hit function
 function hit(){
   playerHand.push(shuffle_Cards(deck_Of_Cards)),
   alert("PLAYER hand: " + playerhandValue(playerHand));
-  const playerCard3 = document.createElement('div')
-  playerCard3.classList.add("card")
-  console.log(playerCard3) 
-  playerCard3.innertext=hit
   if(playerhandValue(playerHand)>21){
-    console.log("PLAYER BUST!")
+    alert("PLAYER BUST!")
   }
   console.log(playerhandValue(playerHand),"< NEW PLAYER HAND");
 } if(playerhandValue(playerHand) === 21) {
-  console.log("player wins!")
+  alert("player wins!")
 }
-// document.querySelector("#Hit").textContent = handValue()
-// console.log("new playerHand:"+ handValue(playerHand))
+
+
+
+
 function stand(){
   while (dealerhandValue(dealerHand) < 17){
     // deal one card for the dealer
     dealerHand.push(shuffle_Cards(deck_Of_Cards)),
-    alert(dealerhandValue(dealerHand), ' < NEW DEALER HAND');
+    alert(dealerhandValue(dealerHand), '< NEW DEALER HAND');
     if (dealerhandValue(dealerHand) > 21) {
      alert("DEALER BUST! ")
     }if(dealerhandValue(dealerHand) === 21) {
@@ -149,13 +161,12 @@ function stand(){
   }
 }
 
+
+
+
 function reset() {
   window.location.reload()  
  }
-
-
-
-
 
 //  wincondition last thing
 /*---------------------functions---------------------*/
