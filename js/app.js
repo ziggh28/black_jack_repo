@@ -1,4 +1,3 @@
-
 console.log("welcome to the jungle");
 /*-------------------------const---------------------*/
 // make a constant where Jack , Queen & King hold a value of 11
@@ -120,51 +119,48 @@ function startGame(){
     console.log(sum)
     return sum;
    }
-
-
-
+   
+   
+   
    startGame()
-  console.log(playerHand)
-  console.log(dealerhandValue(dealerHand), "dealerHANDER")
+   console.log(playerHand)
+   console.log(dealerhandValue(dealerHand), "dealerHANDER")
+   
+   console.log(dealerHand)
+   
+   
+   
+   
+   //player hit function
+   function hit(){
+     playerHand.push(shuffle_Cards(deck_Of_Cards)),
+     alert("PLAYER hand: " + playerhandValue(playerHand));
+   }if(playerhandValue(playerHand) == 21 || playerHand < dealerHand) {
+     alert("player wins!")
+     console.log(playerhandValue(playerHand),"< NEW PLAYER HAND");
+     if(playerhandValue(playerHand)>21){
+       alert("PLAYER BUST!")
+     }
+   }
 
-  console.log(dealerHand)
-  
-
-
-
-  //player hit function
-function hit(){
-  playerHand.push(shuffle_Cards(deck_Of_Cards)),
-  alert("PLAYER hand: " + playerhandValue(playerHand));
-  if(playerhandValue(playerHand)>21){
-    alert("PLAYER BUST!")
-  }
-  console.log(playerhandValue(playerHand),"< NEW PLAYER HAND");
-} if(playerhandValue(playerHand) === 21) {
-  alert("player wins!")
-}
-
-
-
-
-function stand(){
-  while (dealerhandValue(dealerHand) < 17){
-    // deal one card for the dealer
-    dealerHand.push(shuffle_Cards(deck_Of_Cards)),
-    alert(dealerhandValue(dealerHand), '< NEW DEALER HAND');
-    if (dealerhandValue(dealerHand) > 21) {
-     alert("DEALER BUST! ")
-    }if(dealerhandValue(dealerHand) === 21) {
-    alert("dealer wins!")
+   function stand(){
+     while (dealerhandValue(dealerHand) <= 17){
+      // deal one card for the dealer
+      dealerHand.push(shuffle_Cards(deck_Of_Cards)),
+      alert(dealerhandValue(dealerHand), '< NEW DEALER HAND');
+    }if(dealerhandValue(dealerHand) == 21 || playerHand > dealerHand ) {
+      alert("dealer wins!")
+    }if (dealerhandValue(dealerHand) > 21) {
+      alert("DEALER BUST! ")
+      console.log("DEALER hand: " + dealerhandValue(dealerHand));
     }
-    console.log("DEALER hand: " + dealerhandValue(dealerHand));
   }
-}
-
-
-
-
-function reset() {
+  
+  
+  
+  
+  
+  function reset() {
   window.location.reload()  
  }
 
