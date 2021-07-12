@@ -1,42 +1,28 @@
 <!DOCTYPE html>
-<html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BlackJack</title>
+        <title>blackjack</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <script  defer src="js/app.js"></script>
+        <script src="js/app.js" async defer></script>
     </head>
     <body>
-        <div class="container">
-            <div id= "top-row">
-                <h1>BlackJack</h1>
-            </div>
-            <div id="bottom-row">
-  
-                 <button id="stand">Stand</button> 
-                <button id="hit">Hit</button>   
-                <button id="reset">deal</button>
-                
-            </div>
-            <div id="left-column">
-            
-              
-                <h2 id= "pHV">playerhand value:</h2>
-                    <div id="playerHand"></div>
-            </div>
-            <div id="right-column">
-               
-                <h2 id="dhV">dealerhand value:</h2>
-                <div id="dealerHand"></div>
-                
+        <h1>Blackjack</h1>
+        <button onclick="hit2()">Hit</button>
+        <h2>player 2</h2>
+        <p id="player2card">Cards:</p>
+        <p id= "player2sum">HandValue:</p>
+        <br>
+        <p id= "message">want to play a game?</p>
+        <br>
+        <h2>player 1</h1>
+        <p id="playercard">Cards:</p>
+        <p id= "playersum">HandValue:</p>
+        <button onclick="deal()">DEAL</button>
+        <button onclick="hit()">HIT</button>
 
-            </div>
-        </div>
     </body>
 </html>
-
-
-
