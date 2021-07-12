@@ -1,8 +1,6 @@
 # black_jack_repo
 *reason I picked blackjack is because blackjack is a mid-level game that at offered me a chance to better develope my skill in css and javscript 
-
-*what I learned- understanding gamelogic and control- flow. 
-
+ 
 
 * terminalogy 
   
@@ -28,7 +26,12 @@ The dealer must hit if their card total is less than 17, and must stand if it is
 Whichever player gets closest to 21 without exceeding it, wins.
 
 screenshots:
-![Screen Shot 2021-07-08 at 1 14 50 PM](https://user-images.githubusercontent.com/86076993/124973146-2f660d00-dff9-11eb-843c-29a8e0850cf6.png)
+![Screen Shot 2021-07-12 at 4 53 06 AM](https://user-images.githubusercontent.com/86076993/125260085-f7e3b300-e2cd-11eb-8548-0dc1da751a11.png)
+
+![Screen Shot 2021-07-12 at 4 53 25 AM](https://user-images.githubusercontent.com/86076993/125260288-31b4b980-e2ce-11eb-9b71-3545cb5c16ff.png)
+
+![Screen Shot 2021-07-12 at 4 52 45 AM](https://user-images.githubusercontent.com/86076993/125260054-f0240e80-e2cd-11eb-85ef-be4f7a6f6fcc.png)
+
 ![Screen Shot 2021-07-08 at 2 38 53 PM](https://user-images.githubusercontent.com/86076993/124974007-435e3e80-dffa-11eb-8dbc-7b3afd99e60a.png)
 
 
@@ -36,7 +39,7 @@ screenshots:
 technology used:
 html, css, javascript and surge
 
-icebox: add a bet system to the game with a audio element , add split function. 
+improvement: add a bet system to the game with a audio element , add split function. 
 
 credit: 
 ben manley, blake romano , caroline urea
